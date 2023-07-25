@@ -1,0 +1,183 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+{% block title %} Consultants {% endblock%}
+
+
+{% block content%}
+
+  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'assets/img/breadcrumbs-bg.jpg' %});">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>Consultants</h2>
+        <ol>
+          <li><a href="{% url 'main_app:index_page' %}">Home</a></li>
+          <li>Consultants</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+      <!-- ***** Header ***** -->
+
+        <div class="section-header my-3">
+          <h2>Our <em>Consultants</em> Provides</em></h2>
+          </div>              
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 my-5 posts-list">
+
+          <div class="col-xl-4 col-md-6">
+            <div class="post-item position-relative h-100">
+
+              <div class="post-img position-relative overflow-hidden">
+                <img src={% static 'assets/img/blog/blog-1.jpg' %} class="img-fluid" alt="">
+                <span class="post-date">December 12</span>
+              </div>
+
+              <div class="post-content d-flex flex-column">
+
+                <h3 class="post-title">How to improve your Local Score</h3>
+
+                <div class="meta d-flex align-items-center">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-person"></i> <span class="ps-2">Ahmed Al-Qahtani</span>
+                  </div>
+                  <span class="px-3 text-black-50">/</span>
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-folder2"></i> <span class="ps-2">Design</span>
+                  </div>
+                </div>
+
+                <p>
+                  At Design Talk, we strongly believe that ideas must be shaped by a firm’s objectives and reflect their unique character. Our ability to isolate and communicate those qualities is integral to our success. We pride ourselves on our concise writing skills, engaging graphics, compelling storytelling, and sharp marketing strategies.
+                </p>
+
+                <hr>
+
+                <a href="#" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+
+              </div>
+
+            </div>
+          </div>
+          <!-- End post list item -->
+
+          <div class="col-xl-4 col-md-6">
+            <div class="post-item position-relative h-100">
+
+              <div class="post-img position-relative overflow-hidden">
+                <img src={% static 'assets/img/blog/blog-2.jpg' %} class="img-fluid" alt="">
+                <span class="post-date">March 19</span>
+              </div>
+
+              <div class="post-content d-flex flex-column">
+
+                <h3 class="post-title">How to improve your Ikteva Score</h3>
+
+                <div class="meta d-flex align-items-center">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-person"></i> <span class="ps-2">saad al nora</span>
+                  </div>
+                  <span class="px-3 text-black-50">/</span>
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-folder2"></i> <span class="ps-2">Iktva Score Expert</span>
+                  </div>
+                </div>
+
+                <p>
+                  At Design Talk, we strongly believe that ideas must be shaped by a firm’s objectives and reflect their unique character. Our ability to isolate and communicate those qualities is integral to our success. We pride ourselves on our concise writing skills, engaging graphics, compelling storytelling, and sharp marketing strategies.
+                </p>
+
+                <hr>
+
+                <a href="#" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+
+              </div>
+
+            </div>
+          </div><!-- End post list item -->
+
+          <div class="col-xl-4 col-md-6">
+            <div class="post-item position-relative h-100">
+
+              <div class="post-img position-relative overflow-hidden">
+                <img src={% static 'assets/img/blog/blog-3.jpg' %} class="img-fluid" alt="">
+                <span class="post-date">June 24</span>
+              </div>
+
+              <div class="post-content d-flex flex-column">
+
+                <h3 class="post-title">Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero sit sint.</h3>
+
+                <div class="meta d-flex align-items-center">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-person"></i> <span class="ps-2">Mohmmad Rami</span>
+                  </div>
+                  <span class="px-3 text-black-50">/</span>
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
+                  </div>
+                </div>
+
+                <p>
+                  Aut iste neque ut illum qui perspiciatis similique recusandae non. Fugit autem dolorem labore omnis et. Eum temporibus fugiat voluptate enim tenetur sunt omnis.
+                </p>
+
+                <hr>
+
+                <a href="#" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+
+              </div>
+
+            </div>
+          </div><!-- End post list item --> 
+            <div class="col-xl-4 col-md-6">
+            <div class="post-item position-relative h-100">
+
+              <div class="post-img position-relative overflow-hidden">
+                <img src={% static 'assets/img/blog/blog-4.jpg' %} class="img-fluid" alt="">
+                <span class="post-date">June 24</span>
+              </div>
+
+              <div class="post-content d-flex flex-column">
+
+                <h3 class="post-title">How to deal with accounting</h3>
+
+                <div class="meta d-flex align-items-center">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-person"></i> <span class="ps-2">Yasser Omar</span>
+                  </div>
+                  <span class="px-3 text-black-50">/</span>
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-folder2"></i> <span class="ps-2">Economics spiclaist</span>
+                  </div>
+                </div>
+
+                <p>
+                  Economic consultants "conduct research, analyze policy and offer expert testimony."1 Generally, they try to bring clarity to the complexity of economic problems. Economic consultants analyze business organizations' economic statuses and propose plans to help improve and change their existing programs.
+                </p>
+
+                <hr>
+
+                <a href="#" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+
+              </div>
+
+            </div>
+          </div>
+          </div></div>
+  
+{% endblock %}

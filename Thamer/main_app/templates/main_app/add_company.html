@@ -1,0 +1,99 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+{% block title %} Add New company {% endblock%}
+
+
+{% block content%}
+
+  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'assets/img/breadcrumbs-bg.jpg' %});">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>Company</h2>
+        <ol>
+          <li><a href="{% url 'main_app:index_page' %}">Home</a></li>
+          <li>Add Company</li>
+        </ol>
+
+      </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+<h1>Add company</h1>
+<div class="container">
+         <!-- ***** calling  model   method= POST ***** -->
+    <form action="{% url 'main_app:add_company' %}" method="POST"  enctype="multipart/form-data">
+        {% csrf_token %}
+            <!-- ***** here get name in model ***** -->
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">name</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter company name" name="name" required>
+        </div>
+            <!-- ***** here get Sectos in model ***** -->
+        <label for="exampleFormControlInput1" class="form-label">Sectors:</label>
+<label for="exampleFormControlInput1" class="form-label">Sectors:</label>
+        <select name="sectors" class="form-select" aria-label="Default select example">
+        <option selected> Choose Sectors:</option>
+            <option value="Energy">Energy</option>
+            <option value="Materials">Materials</option>
+            <option value="Media and Entertainment">Media and Entertainment</option>
+            <option value="Captial goods">Captial goods</option>
+            <option value="Commercial & Professional Svc">Commercial & Professional Svc</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Consumer Durables">Consumer Durables</option>
+            <option value="Consumer Services">Consumer Services</option>
+            <option value="Retailing">Retailing</option>
+            <option value="Food & Beverages">Food & Beverages</option>
+            <option value="Health care Equipment & Svc">Health care Equipment & Svc</option>
+       
+         </select>
+            <!-- ***** here get local_score in model ***** -->
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">local Score</label>
+            <textarea class="form-control" id="exampleFormControlInput1" placeholder="Enter your local score" name="local_score" required></textarea>
+        </div>        
+            <!-- ***** here get ikteva_score_now in model ***** -->
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Ikteva Score Now</label>
+            <textarea class="form-control" id="exampleFormControlInput1" placeholder="Enter your current iktva score" name="ikteva_score_now" required></textarea>
+        </div>
+            <!-- ***** here get ikteva_score_befor in model ***** -->
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Ikteva Score Befor</label>
+            <textarea class="form-control" id="exampleFormControlInput1" placeholder="Enter last year iktva score" name="ikteva_score_before" required ></textarea>
+        </div>
+            <!-- ***** here get Description in model ***** -->
+
+    <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Description</label>
+            <textarea class="form-control" id="exampleFormControlInput1" placeholder="Enter a brief description" name="description"></textarea>
+        </div>
+            <!-- ***** here get Email in model ***** -->
+
+            <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <textarea class="form-control" id="exampleFormControlInput1" placeholder="Enter an email" name="email" required></textarea>
+        </div>
+            <!-- ***** here get number in model ***** -->
+            <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Contact Number</label>
+            <textarea class="form-control" id="exampleFormControlInput1" placeholder="Enter an phone number" name="contact_number" required></textarea>
+        </div>
+            <!-- ***** btn sumbit ***** -->
+        <div class="mb-3">
+            <input type="submit" value="Create company" class="btn btn-primary" />
+        </div>
+    </form>
+
+</div>
+{% endblock %}

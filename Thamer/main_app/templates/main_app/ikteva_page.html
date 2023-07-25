@@ -1,0 +1,78 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+
+
+{% block title %}ikteva informations{% endblock %}
+
+{% block content %}
+  <body data-aos-easing="slide" data-aos-duration="800" data-aos-delay="0">
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'assets/img/breadcrumbs-bg.jpg' %});">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>Services</h2>
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Services</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+
+
+    <!-- ======= Alt Services Section ======= -->
+    <section id="alt-services" class="alt-services">
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="row justify-content-around gy-4">
+          <div class="col-lg-6 img-bg aos-init aos-animate" style="background-image: url({% static 'assets/img/over_view_photo.png' %});" data-aos="zoom-in" data-aos-delay="100"></div>
+
+          <div class="col-lg-5 d-flex flex-column justify-content-center">
+            <h3>What is ikteva?</h3>
+            <p>The NTCs initiative was launched back in 2008 as part of a strategic partnership between Saudi Aramco and Technical & Vocational Training Corp. (TVTC) to build National Training Centers (NTCs) that would qualify young Saudis and provide employment opportunities for them in various industry sectors through a sponsorship scheme that provides training followed by employment. The NTCs provide a key platform that strengthens the impact of In-Kingdom Total Value Add (IKTVA) through providing market tailored training to support workforce development, and directly contribute to Saudization.</p>
+
+            <div class="icon-box d-flex position-relative aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+              <i class="bi bi-easel flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">more info</a></h4>
+                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-patch-check flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">more info</a></h4>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-brightness-high flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">more info</a></h4>
+                <p>Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-brightness-high flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">more info</a></h4>
+                <p>Est voluptatem labore deleniti quis a delectus et. Saepe dolorem libero sit non aspernatur odit amet. Et eligendi</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Alt Services Section -->
+
+
+ 
+{% endblock %}

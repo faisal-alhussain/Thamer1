@@ -1,0 +1,186 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+
+{% block title %}{{ company.name }}{% endblock%}
+
+
+{% block content%}
+  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'assets/img/breadcrumbs-bg.jpg' %});">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>{{company.name}}</h2>
+        <ol>
+          <li><a href="{% url 'main_app:index_page' %}">Home</a></li>
+          <li>Company Details</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+<style>
+.panel1{
+max-width:700px;
+}
+.content-body{
+display: inline;
+}
+.logo-row{
+
+}
+
+
+.product__details__text ul li .share a {
+	display: inline-block;
+	font-size: 15px;
+	color: black;
+	margin-right: 25px;
+}
+
+.product__details__text ul li .share a:last-child {
+	margin-right: 0;
+}
+
+</style>
+
+  <!-- ***** Banner TAG ***** -->
+
+  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ***** request from model class Company name, description ***** -->
+<div class="container py-4">
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+        <h1 class="display-5 fw-bold">{{ company.name }}</h1>
+        <p class="col-md-8 fs-4">{{ company.description }}</p>
+      </div>
+    </div>
+
+    <div class="row align-items-md-stretch">
+      <div class="col-md-6" >
+        <div class="h-50 p-5 bg-body-tertiary rounded-3">
+<div class="container text-center">
+   <!-- ***** table start ***** -->
+  <div class="row align-items-start">
+    <div class="col">
+Local Score
+    </div>
+    <div class="col">
+Ikteva Score Now
+    </div>
+    <div class="col">
+Ikteva Score Before
+    </div>
+  </div>
+</div>
+
+
+_________________________________________________________________________________________________
+
+
+<div class="container text-center">
+  <!-- ***** request from model class Company local, ikteva befor , now  -->
+  <div class="row align-items-start">
+    <div class="col">
+{{company.local_score}}%
+    </div>
+    <div class="col">
+{{company.ikteva_score_now}}%
+    </div>
+    <div class="col">
+{{company.ikteva_score_before}}%
+    </div>
+  </div>
+</div>
+</div>
+<div class="row align-items-md-stretch">
+<div class="col-md-13" >
+        <div class="h-100 p-5 bg-body-tertiary rounded-3">
+        <div class="container text-center">
+
+        <!-- ***** request from model class Company email, contact --> 
+  <div class="row align-items-start p-4" >
+  <div class="row p-2">
+Email:{{company.email}}
+    </div>
+    <div class="row p-2">
+Phone Number: {{company.contact_number}}
+    </div>
+    <div class="row p-2">
+Socials:
+  <!-- ***** request from model class Company after update info website, twitter , insgram -->      
+          <div class="share">
+              <a href="{{company.website}}"><i class="fab fa-facebook p-4"></i></a>
+              <a href="{{company.website}}"><i class="fab fa-linkedin-in p-4"></i></a>
+              <a href="{{company.instagram_link}}"><i class="fab fa-instagram p-4"></i></a>
+              <a href="{{company.twitter_link}}"><i class="fab fa-twitter p-4"></i></a>
+          </div>
+      </li>
+</div>
+  <!-- ***** update  model class Company ***** -->
+    {% if request.user.is_authenticated %}
+    <a class="btn btn-primary" href="{% url 'main_app:update_company' company.id %}" role="button">update info</a>
+    {% endif %}
+
+  </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+
+</div>
+      
+      <div class="col-md-6 my-5">
+        <div class="h-100 p-5 bg-body-tertiary border rounded-3 max-width:500px;">
+          <h2>a graph of iktva scores</h2>
+             <div id="myPlot" style="width:100%"></div>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+<script>
+const xArray = [2015,2022,2023];
+const yArray = [0,{{company.ikteva_score_before}},{{company.ikteva_score_now}}];
+
+// Define Data
+const data = [{
+  x: xArray,
+  y: yArray,
+  mode:"lines"
+}];
+
+// Define Layout
+const layout = {
+  xaxis: {range: [2015,2023], title: "years"},
+  yaxis: {range: [0, 100], title: "iktva score"},
+};
+
+// Display using Plotly
+Plotly.newPlot("myPlot", data, layout);
+</script>
+              </div>
+            </div> 
+          </div>         
+        </div>
+
+
+
+        
+{% endblock %}

@@ -1,0 +1,386 @@
+{% extends 'main_app/base.html'%}
+{% load static %}
+
+{% block title %}Home Page{% endblock %}
+
+
+{% block content %}
+<!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero">
+
+    <div class="info d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2 data-aos="fade-down">Welcome to <span>Thamer</span></h2>
+            <p data-aos="fade-up">the place where compaines can connect</p>
+              {% if request.user.is_authenticated%}
+              <a data-aos="fade-up" data-aos-delay="200" href="{% url 'main_app:market_page' %}" class="btn-get-started">Check Market</a>
+              {% else %}
+            <a data-aos="fade-up" data-aos-delay="200" href="{% url 'users_app:login' %}" class="btn-get-started">Get Started</a>
+              {% endif %} 
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <div class="carousel-item active" style="background-image: url({% static 'assets/img/hero-carousel/phto3.jpeg' %})"></div>
+      <div class="carousel-item" style="background-image: url({% static 'assets/img/hero-carousel/phto2.jpeg' %})"></div>
+      <div class="carousel-item" style="background-image: url({% static 'assets/img/hero-carousel/phto4.jpeg' %})"></div>
+      <div class="carousel-item" style="background-image: url({% static 'assets/img/hero-carousel/hero-carousel-5.jpg' %})"></div>
+
+      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= Get Started Section ======= -->
+    
+    <!-- ======= Constructions Section ======= -->
+    <section id="constructions" class="constructions">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Our <em>website</em> Provides</em></h2>
+          </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url({% static 'assets/img/constructions-1.jpg' %});"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Financial Goals</h4>
+                    <p>Saving time and effort in the procurement process and raise awareness about iktva impact on the market</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url({% static 'assets/img/S2.jpg' %});"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Security</h4>
+                    <p>We have a Full CyberSecurity team and ai technology that both work for the security of your information.</p></div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url({% static 'assets/img/constructions-3.jpg' %});"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Standard</h4>
+                    <p>In today's market we hope to raise the Standard of iktva and Local content Scores</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url({% static 'assets/img/constructions-4.jpg' %});"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Tools</h4>
+                      <p>We provide many Subscription options that allow for flexibility.Moreover Courses and expert Consulting for iktva related advices</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+        </div>
+
+      </div>
+    </section><!-- End Constructions Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Our<em>Services &amp; Features</h2>
+<p>Provides a very important element in the 2030 vision that helps to grow and encourage the diversity of the market and saves time for both the company and suppliers.</p>        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-mountain-city"></i>
+              </div>
+              <h3>Need help</h3>
+                <p>if you need help or find any error please don't be afraid to contact us </p>
+              <a href="#" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+              </div>
+              <h3>Iktva score</h3>
+                <p>what is iktva score? and how will it impact my company?</p>
+              <a href="#" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-compass-drafting"></i>
+              </div>
+              <h3>Join Us</h3>
+                <p>we would be honored to have you a part of our community </p>
+              <a href="#" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-trowel-bricks"></i>
+              </div>
+              <h3>24/7 Help &amp; Support</h3>
+              <p>if you need help with the website our chatbot is available 24/7 to answer your questions</p>
+              <a href="#" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features section-bg">
+      <div class=" section-header">
+        <h2>Our Subscribtion Plans</h2>
+        <p>we have Subscribtion Plans for every customer even if you want a free option</p>
+      </div>
+      <div class="container" data-aos="fade-up">
+
+        <ul class="nav nav-tabs row  g-2 d-flex">
+
+          <li class="nav-item col-4">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+              <h4>Free Plan</h4>
+            </a>
+            
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item col-4">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+              <h4>Standard Plan</h4>
+            </a><!-- End tab nav item -->
+
+          <li class="nav-item col-4">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+              <h4>Premium Plan</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+        </ul>
+
+        <div class="tab-content">
+
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                <h3>Free Plan</h3>
+                <p class="fst-italic">
+                  in this you have very basic intercation with our website
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> sign up</li>
+                  <li><i class="bi bi-check2-all"></i> market</li>
+                  <li><i class="bi bi-check2-all"></i> Full Subcribtion Time Support</li>
+                </ul>
+                  <button type="submit" class="btn btn-warning">Purchase This Plan Now</button>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                <img src={% static 'assets/img/s4.jpg' %} alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End tab content item -->
+
+          <div class="tab-pane" id="tab-2">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+                <h3>Standard Plan</h3>
+                <p class="fst-italic">
+                 in this plan you have advanced intercation with our website.
+                </p>
+                <ul>
+                <li><i class="bi bi-check2-all"></i> sign up</li>
+                  <li><i class="bi bi-check2-all"></i> market</li>
+                  <li><i class="bi bi-check2-all"></i> Full Subcribtion Time Support</li>
+                  <li><i class="bi bi-check2-all"></i> Courses</li>
+                </ul>
+                <button type="submit" class="btn btn-warning">Purchase This Plan Now</button>
+              </div>
+
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src={% static 'assets/img/s4.jpg' %} alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          
+          <!-- End tab content item -->
+
+          <div class="tab-pane" id="tab-3">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+                <h3>Premium Plan</h3>
+                                <p class="fst-italic">
+                 in this plan you have advanced intercation with our website.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> sign up</li>
+                  <li><i class="bi bi-check2-all"></i> market</li>
+                  <li><i class="bi bi-check2-all"></i> Full Subcribtion Time Support</li>
+                  <li><i class="bi bi-check2-all"></i> Courses</li>
+                  <li><i class="bi bi-check2-all"></i> Consultants</li>
+                  <li><i class="bi bi-check2-all"></i> Invesemnt Recomdations</li>
+                </ul>
+                <button type="submit" class="btn btn-warning">Purchase This Plan Now</button>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src={% static 'assets/img/s4.jpg' %} alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End tab content item -->
+
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Our Experts</h2>
+        </div>
+
+        <div class="slides-2 swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src={% static 'assets/img/testimonials/testimonials-1.jpg' %} class="testimonial-img" alt="">
+                  <h3>Ahmed Al-Qahtani</h3>
+                  <h4>Financial Apps</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    "A company's financial success is a reflection of the hard work and dedication of its employees. Without them, there is no growth." -Ahmed Al-Qahtani
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src={% static 'assets/img/testimonials/testimonials-2.jpg' %} class="testimonial-img" alt="">
+                  <h3>Sara Khaled</h3>
+                  <h4>Digital Business</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    "Skills can be taught, but character is innate. Hire based on character and you'll build a team of loyal, passionate employees." -Sara Khaled
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src={% static 'assets/img/testimonials/testimonials-3.jpg' %} class="testimonial-img" alt="">
+                  <h3>Yasser Omar</h3>
+                  <h4>Business &amp; Economics spiclaist</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    "Doing work that you love is not just a luxury, it's a necessity for a fulfilling life. Find your passion and pursue it relentlessly." -Yasser Omar
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src={% static 'assets/img/testimonials/testimonials-4.jpg' %} class="testimonial-img" alt="">
+                  <h3>Ali youesf</h3>
+                  <h4>Local Score expert</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    The value of a great employee cannot be measured in dollars and cents. They are priceless assets to any organization." -Ali youesf  
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+  </main><!-- End #main -->
+
+  {% endblock %}
