@@ -17,7 +17,7 @@
               {% if request.user.is_authenticated%}
               <a data-aos="fade-up" data-aos-delay="200" href="{% url 'main_app:market_page' %}" class="btn-get-started">Check Market</a>
               {% else %}
-            <a data-aos="fade-up" data-aos-delay="200" href="{% url 'users_app:login' %}" class="btn-get-started">Get Started</a>
+            <a data-aos="fade-up" data-aos-delay="200" href="{% url 'main_app:login' %}" class="btn-get-started">Get Started</a>
               {% endif %} 
 
           </div>

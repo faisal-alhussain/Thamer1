@@ -297,9 +297,9 @@ header h2 {
             </ul>
           </li>
           <li><a href="#" ></a>Welcome, {{request.user.username}}.</li>
-          <li><a href="{% url 'users_app:signout_page' %}">Sign Out</a></li>
+          <li><a href="{% url 'main_app:signout_page' %}">Sign Out</a></li>
            {% else %}
-          <li><a href="{% url 'users_app:login' %}">sign Up</a></li>
+          <li><a href="{% url 'main_app:login' %}">sign Up</a></li>
           {% endif %} 
         </ul>
       </nav><!-- .navbar -->

@@ -17,6 +17,9 @@ urlpatterns = [
     path("home/experts/quastion", views.experts_page, name="experts_page"),
     path("home/companys/", views.company_page, name="company_page"),
     path("companys/owner_details/<company_id>/", views.onwer_details, name="onwer_details"),
+    path("sign_up/", views.signup, name="signup"),
+    path("login/", views.login_page, name="login"),
+    path("signout/", views.signout_page, name="signout_page"),
 
 
 
